@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<property name="main.log.level" value="DEBUG" />
+
+	<!-- 输出到控制台 -->
+	<appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date|%thread|%X{invokeNo}|%-5level %logger{80} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 根LOGGER -->
+	<root>
+		<!-- 用来设置打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF, 默认是DEBUG -->
+		<level value="${main.log.level}" />
+		<appender-ref ref="ConsoleAppender" />
+	</root>
+</configuration>

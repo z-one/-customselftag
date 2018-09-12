@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:custom="http://www.test.org/schema/custom"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.test.org/schema/custom http://www.test.org/schema/custom/spring-custom.xsd"
+	default-lazy-init="false">
+
+
+	<!-- 基础bean注入测试 -->
+	<!-- <bean name="testJavaBean" class="TestJavaBean"
+		/> -->
+
+	<custom:test id="testBean" pointcut="testPointCut" />
+</beans>
